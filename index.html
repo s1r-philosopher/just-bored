@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hope You're Doing Well</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #121212; /* Dark background */
+      margin: 0;
+    }
+    #typewriter {
+      font-size: 24px;
+      color: #ffffff; /* White text */
+    }
+    .typing {
+      border-right: 2px solid #ffffff; /* White typing cursor */
+      white-space: nowrap;
+      overflow: hidden;
+    }
+  </style>
+</head>
+<body>
+  <div id="typewriter"></div>
+
+  <script>
+    const text = "I hope you are doing well <3";
+    let i = 0;
+
+    function typeWriter() {
+      if (i < text.length) {
+        document.getElementById("typewriter").innerHTML += text.charAt(i);
+        i++;
+        setTimeout(typeWriter, 100); // Adjust typing speed here
+      }
+    }
+
+    window.onload = () => {
+      const typewriterElement = document.getElementById("typewriter");
+      typewriterElement.classList.add('typing');
+      typeWriter();
+    };
+  </script>
+</body>
+</html>

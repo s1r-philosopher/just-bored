@@ -4,26 +4,32 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hope Message</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      background-color: #121212; 
-      margin: 0;
-    }
-    #typewriter {
-      font-size: 24px;
-      color: #ffffff; 
-    }
-    .typing {
-      border-right: 2px solid #ffffff;
-      white-space: nowrap;
-      overflow: hidden;
-    }
-  </style>
+ <style>
+body {
+  font-size: 24px;
+  color: #ffffff;
+  background-color: #000000;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+}
+
+#typewriter {
+  white-space: pre-wrap;
+  width: 90%;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    font-size: 18px;
+  }
+}
+</style>
+
 </head>
 <body>
   <div id="typewriter"></div>
